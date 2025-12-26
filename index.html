@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlowBody - Skincare Tubuh Premium</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header & Navigasi -->
+    <header>
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <h1><i class="fas fa-spa"></i> GlowBody</h1>
+                    <p>Skincare Tubuh Premium</p>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Beranda</a></li>
+                    <li><a href="#products">Produk</a></li>
+                    <li><a href="#about">Tentang Kami</a></li>
+                    <li><a href="#testimonials">Testimoni</a></li>
+                    <li><a href="#contact">Kontak</a></li>
+                </ul>
+                <div class="nav-icons">
+                    <a href="#" id="cart-btn"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cart-sidebar">
+        <div class="cart-header">
+            <h3><i class="fas fa-shopping-cart"></i> Keranjang Belanja</h3>
+            <button class="close-cart" id="close-cart">&times;</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Item keranjang akan ditampilkan di sini -->
+            <p class="empty-cart">Keranjang belanja Anda kosong</p>
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total:</span>
+                <span id="cart-total-price">Rp 0</span>
+            </div>
+            <button class="checkout-btn" id="checkout-btn">Lanjut ke Pembayaran</button>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Kulit Tubuh Sehat & Bersinar</h2>
+                <p>Produk skincare tubuh premium dengan bahan alami terbaik untuk perawatan kulit sehari-hari. Memberikan kelembaban, nutrisi, dan perlindungan untuk kulit tubuh Anda.</p>
+                <a href="#products" class="btn-primary">Belanja Sekarang</a>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Produk Skincare Tubuh">
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <h2 class="section-title">Produk Unggulan Kami</h2>
+            <p class="section-subtitle">Pilih produk terbaik untuk perawatan kulit tubuh Anda</p>
+            
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="body-lotion">Body Lotion</button>
+                <button class="filter-btn" data-filter="body-scrub">Body Scrub</button>
+                <button class="filter-btn" data-filter="body-wash">Body Wash</button>
+                <button class="filter-btn" data-filter="body-oil">Body Oil</button>
+            </div>
+            
+            <div class="product-grid" id="product-grid">
+                <!-- Produk akan dimuat dari JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content">
+                <h2 class="section-title">Kenapa Memilih GlowBody?</h2>
+                <p>GlowBody didirikan dengan misi memberikan perawatan tubuh terbaik dengan bahan-bahan alami berkualitas tinggi. Produk kami diformulasikan oleh ahli dermatologi dan bebas dari bahan berbahaya seperti paraben, sulfat, dan pewangi buatan.</p>
+                
+                <div class="features">
+                    <div class="feature">
+                        <i class="fas fa-leaf"></i>
+                        <h3>Bahan Alami</h3>
+                        <p>Menggunakan ekstrak tanaman organik dan minyak esensial murni.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-certificate"></i>
+                        <h3>Teruji Dermatologis</h3>
+                        <p>Sudah teruji klinis aman untuk semua jenis kulit, termasuk sensitif.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-recycle"></i>
+                        <h3>Ramah Lingkungan</h3>
+                        <p>Kemasan produk kami dapat didaur ulang dan ramah lingkungan.</p>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-heart"></i>
+                        <h3>Vegan & Cruelty-Free</h3>
+                        <p>Tanpa bahan hewani dan tidak diuji pada hewan.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1596462502278-27bfdc403348?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Bahan Alami Skincare">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Testimoni Pelanggan</h2>
+            <p class="section-subtitle">Apa kata mereka tentang produk GlowBody</p>
+            
+            <div class="testimonial-slider">
+                <div class="testimonial active">
+                    <div class="testimonial-content">
+                        <p>"Body lotion dari GlowBody benar-benar mengubah kulit saya. Kulit yang tadinya kering dan bersisik sekarang jadi lembut dan lembab sepanjang hari."</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Testimoni 1">
+                            <div>
+                                <h4>Sarah Wijaya</h4>
+                                <span>Pengguna 6 bulan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Body scrub-nya sangat lembut tapi efektif mengangkat sel kulit mati. Kulit saya jadi halus dan glowing. Sangat recommended!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Testimoni 2">
+                            <div>
+                                <h4>Maya Indah</h4>
+                                <span>Pengguna 3 bulan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial">
+                    <div class="testimonial-content">
+                        <p>"Aroma body wash-nya sangat menenangkan. Setelah seharian kerja, mandi dengan produk ini seperti spa di rumah sendiri. Worth it banget!"</p>
+                        <div class="testimonial-author">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Testimoni 3">
+                            <div>
+                                <h4>Budi Santoso</h4>
+                                <span>Pengguna 1 tahun</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="slider-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="slider-btn next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-info">
+                <h2 class="section-title">Hubungi Kami</h2>
+                <p>Ada pertanyaan tentang produk atau butuh rekomendasi perawatan kulit? Tim kami siap membantu Anda.</p>
+                
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Alamat</h4>
+                            <p>Jl. Merdeka No. 123, Jakarta Pusat</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Telepon</h4>
+                            <p>(021) 1234-5678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>info@glowbody.id</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <div>
+                            <h4>Jam Operasional</h4>
+                            <p>Senin - Jumat: 09.00 - 17.00</p>
+                            <p>Sabtu: 09.00 - 15.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form">
+                <h3>Kirim Pesan</h3>
+                <form id="message-form">
+                    <div class="form-group">
+                        <input type="text" id="name" placeholder="Nama Lengkap" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" rows="5" placeholder="Pesan Anda" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Kirim Pesan</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <div class="logo">
+                        <h1><i class="fas fa-spa"></i> GlowBody</h1>
+                    </div>
+                    <p>Perawatan tubuh premium dengan bahan alami terbaik untuk kulit sehat dan bersinar.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Kategori Produk</h4>
+                    <ul>
+                        <li><a href="#">Body Lotion</a></li>
+                        <li><a href="#">Body Scrub</a></li>
+                        <li><a href="#">Body Wash</a></li>
+                        <li><a href="#">Body Oil</a></li>
+                        <li><a href="#">Paket Perawatan</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Bantuan</h4>
+                    <ul>
+                        <li><a href="#">Cara Pemesanan</a></li>
+                        <li><a href="#">Pengiriman & Pengembalian</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Syarat & Ketentuan</a></li>
+                        <li><a href="#">Kebijakan Privasi</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-col">
+                    <h4>Berlangganan Newsletter</h4>
+                    <p>Dapatkan informasi promo dan tips perawatan kulit terbaru.</p>
+                    <form id="newsletter-form">
+                        <div class="newsletter-input">
+                            <input type="email" placeholder="Email Anda" required>
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 GlowBody Skincare. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Notification -->
+    <div class="notification" id="notification">
+        <span id="notification-text">Produk telah ditambahkan ke keranjang!</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
